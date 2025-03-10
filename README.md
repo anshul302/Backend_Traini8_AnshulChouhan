@@ -62,21 +62,26 @@ This project meets the following key requirements:
 
 ```json
 {
-  "centerName": "AI Training Center",
+  "id": 1,
   "centerCode": "WTC123456789",
+  "centerName": "AI Training Center",
   "address": {
-    "detailedAddress": "123 Main St",
-    "city": "New York",
-    "state": "NY",
+    "detailedAddress": "123 Main road",
+    "city": "Chandigarh",
+    "state": "Punjab",
     "pincode": "10001"
   },
   "studentCapacity": 100,
   "coursesOffered": ["AI", "ML"],
-  "contactEmail": "info@aitraining.com",
+  "createdOn": 1625412345000,
+  "contactEmail": "PNB@aitraining.com",
   "contactPhone": "1234567890"
 }
 
-2. Get All Training Centers (GET /api/training-center)
+```
+
+
+### 2. Get All Training Centers (GET /api/training-center)
 Description: Retrieves a list of all stored training centers. Optionally, it can filter by city or state.
 
 Query Parameters:
@@ -87,24 +92,27 @@ state (Optional): Filter training centers by state.
 
 Success Response (200 OK):    Convert this into markdown file
 
+```json
 [
   {
     "id": 1,
     "centerCode": "WTC123456789",
     "centerName": "AI Training Center",
     "address": {
-      "detailedAddress": "123 Main St",
-      "city": "New York",
-      "state": "NY",
+      "detailedAddress": "123 Main road",
+      "city": "Chandigarh",
+      "state": "Punjab",
       "pincode": "10001"
     },
     "studentCapacity": 100,
     "coursesOffered": ["AI", "ML"],
     "createdOn": 1625412345000,
-    "contactEmail": "info@aitraining.com",
+    "contactEmail": "PNB@aitraining.com",
     "contactPhone": "1234567890"
   }
 ]
+
+```
 
 
 Setup Instructions
@@ -113,7 +121,8 @@ Java 17+: Make sure Java is installed on your machine.
 MySQL: You need a MySQL database running locally or remotely.
 Maven: Ensure Maven is installed for dependency management and project build.
 
-Steps
+## Steps
+
 1.Clone the Repository:
 
 git clone https://github.com/anshul302/Backend_Traini8_AnshulChouhan.git
@@ -122,18 +131,21 @@ cd Backend_Traini8_AnshulChouhan
 
 2.Configure the Database: Edit the application.properties file with your MySQL credentials:
 
+```json
 spring.datasource.url=jdbc:mysql://localhost:3306/traini8db
 spring.datasource.username=root
 spring.datasource.password=yourpassword
+```
 
 3.Build the Project: Run the following commands to build the project and install dependencies:
-
+```json
 mvn clean install
+```
 
 4.Run the Application: Start the Spring Boot application:
-
+```json
 mvn spring-boot:run
-
+```
 5.Test the APIs: Use Postman or curl to test the POST and GET APIs.
 
 Contact
@@ -141,5 +153,7 @@ For further information or any queries, please feel free to reach out:
 
 Author: Anshul Chouhan
 Email: anshulchouhn302@gmail.com
+
+
 
 
