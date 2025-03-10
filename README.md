@@ -46,11 +46,6 @@ This project meets the following key requirements:
 - **Filter Implementation**:
   - The GET API supports optional filtering by city and state.
   
-- **Project Structure and Architecture**:
-  - Clean architecture and consistent naming conventions are followed.
-  
-- **Coding Practices**:
-  - Code adheres to best practices with meaningful comments and proper formatting.
 
 ## API Endpoints
 
